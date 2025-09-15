@@ -1,6 +1,7 @@
 import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ isSsrBuild }) => ({
   build: {
@@ -11,5 +12,5 @@ export default defineConfig(({ isSsrBuild }) => ({
         }
       : undefined,
   },
-  plugins: [reactRouter(), tsconfigPaths()],
+  plugins: [reactRouter(), tsconfigPaths(), tailwindcss()],
 }));
